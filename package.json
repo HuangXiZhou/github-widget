@@ -3,16 +3,20 @@
   "version": "1.0.0",
   "description": "A simple and beautiful GitHub widget",
   "author": "Trevor <xizhouh@gmail.com>",
-  "private": true,
+  "private": false,
+  "license": "MIT",
+  "main": "dist/github-widget.min.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
+    "fix": "eslint --fix .",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "vue": "^2.5.2"
   },
   "devDependencies": {
@@ -54,12 +58,15 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.31",
     "karma-webpack": "^2.0.2",
+    "less": "^3.0.1",
+    "less-loader": "^4.0.6",
     "mocha": "^3.2.0",
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
     "phantomjs-prebuilt": "^2.1.14",
     "portfinder": "^1.0.13",
+    "postcss-cssnext": "^3.1.0",
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
     "postcss-url": "^7.2.1",
@@ -81,6 +88,10 @@
   "engines": {
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HuangXiZhou/github-widget.git"
   },
   "browserslist": [
     "> 1%",

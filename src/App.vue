@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <div id="app" class="gw">
     <HelloWorld/>
   </div>
 </template>
@@ -16,13 +15,24 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less" scoped>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: -apple-system,
+              BlinkMacSystemFont,
+              "Segoe UI",
+              Helvetica,
+              Arial,
+              sans-serif,
+              "Apple Color Emoji",
+              "Segoe UI Emoji",
+              "Segoe UI Symbol";
+}
+
+.gw {
+  max-width: 350px;
+  min-height: 300px;
+  background: #fff;
+  border: 1px solid #ddd;
+  cursor: default;
 }
 </style>
